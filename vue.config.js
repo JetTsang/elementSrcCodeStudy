@@ -6,7 +6,7 @@ function resolve(dir) {
 const CompressionPlugin = require('compression-webpack-plugin');//引入gzip压缩插件
 
 // 引入自己写的插件
-const myPlugin = require('./src/myplugin/myPlugin')
+// const myPlugin = require('./src/myplugin/myPlugin')
 
 module.exports = {
   lintOnSave: false, //是否开启eslint
@@ -52,7 +52,7 @@ module.exports = {
           // 假如出现访问.gz文件访问不到的时候，还可以访问源文件双重保障
           deleteOriginalAssets: false
         }),
-        new myPlugin('i-am-params')
+        // new myPlugin('i-am-params')
       ],
       // 把chunk-vendors.js进行分包，提升资源加载速度，很有必要
       optimization: {
